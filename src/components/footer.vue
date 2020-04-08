@@ -1,21 +1,31 @@
 <template>
   <div>
-    <logo :footer="footer" />
-    <div class="social-icon-container">
-      <facebook-icon />
-      <youtube-icon />
-      <twitter-icon />
-      <pinterest-icon />
-      <instagram-icon />
+    <div class="footer-content">
+      <div class="first-footer-container">
+        <logo :footer="footer" />
+        <div class="social-icon-container">
+          <facebook-icon />
+          <youtube-icon />
+          <twitter-icon />
+          <pinterest-icon />
+          <instagram-icon />
+        </div>
+      </div>
+      <div class="second-footer-container">
+        <p>About Us</p>
+        <p>Contact</p>
+        <p>Blog</p>
+      </div>
+      <div class="third-footer-container">
+        <p>Careers</p>
+        <p>Support</p>
+        <p>Privacy Policy</p>
+      </div>
+      <div class="fourth-footer-container">
+        <button class="button">Request Invite</button>
+        <h5>&copy; Easybank. All Rights Reserved</h5>
+      </div>
     </div>
-    <p>About Us</p>
-    <p>Contact</p>
-    <p>Blog</p>
-    <p>Careers</p>
-    <p>Support</p>
-    <p>Privacy Policy</p>
-    <button class="button">Request Invite</button>
-    <h5>&copy; Easybank. All Rights Reserved</h5>
   </div>
 </template>
 

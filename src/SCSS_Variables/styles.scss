@@ -51,8 +51,20 @@ p {
   margin-bottom: 80px;
 }
 
-.header-container {
-  padding: 25px;
+.mobile-hide {
+  @media only screen and (max-width: $desktop) {
+    display: none !important;
+  }
+}
+
+.desktop-hide {
+  @media only screen and (min-width: $desktop) {
+    display: none !important;
+  }
+}
+
+.header {
+  padding: 15px 45px;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -60,7 +72,27 @@ p {
   z-index: 2;
 
   .hamburger {
-    margin-top: 3px;
+    margin-top: 16px;
+  }
+
+  .shortcuts {
+    display: flex;
+    flex-direction: row;
+    margin-top: 11px;
+
+    p {
+      cursor: pointer;
+      margin: 0;
+      padding: 0 20px;
+    }
+  }
+
+  @media only screen and (min-width: $desktop) {
+    justify-content: space-evenly;
+
+    .button {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -68,22 +100,59 @@ p {
   background-color: hsl(0, 0%, 98%);
 
   .image-container {
-    max-height: 350px;
+    height: 335px;
 
-    .bg-mobile {
-      max-width: $mobile;
-      position: relative;
-      z-index: 0;
-      width: 100%;
-      bottom: 20px;
+    @media only screen and (min-width: $desktop) {
+      height: 280px;
     }
 
-    .image-mockups {
-      max-width: $mobile;
-      position: relative;
-      z-index: 1;
-      bottom: 540px;
+    .bg-mobile {
+      position: absolute;
+      z-index: 0;
       width: 100%;
+      top: 37px;
+      display: flex;
+      overflow: hidden;
+      flex-flow: row-reverse;
+    }
+
+    .image-phones {
+      max-width: 385px;
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      top: -68px;
+      width: 100%;
+
+      @media only screen and (min-width: $desktop) {
+        bottom: 100px;
+        width: 700px;
+        max-width: unset;
+      }
+    }
+
+    .bg-desktop {
+      position: absolute;
+      overflow: hidden;
+      z-index: 0;
+      bottom: 90px;
+      width: 50%;
+      right: 0;
+    }
+  }
+
+  @media only screen and (min-width: $desktop) {
+    .intro-container {
+      width: 400px;
+      margin-left: 11%;
+      text-align: left;
+      position: relative;
+      bottom: 160px;
+      font-size: 24px;
+
+      p {
+        padding: 0;
+      }
     }
   }
 }
@@ -97,7 +166,37 @@ p {
   }
 
   .online-banking {
-    margin-top: 25px;
+    @media only screen and (max-width: $desktop) {
+      margin-top: 25px;
+    }
+  }
+}
+
+@media only screen and (min-width: $desktop) {
+  .why-choose-container {
+    margin-left: 11%;
+    text-align: left;
+    width: 600px;
+
+    p {
+      padding: 0;
+    }
+  }
+
+  .choices-container {
+    width: 80%;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+
+    div {
+      margin: 0 10px;
+    }
+
+    p {
+      padding: 0;
+    }
   }
 }
 
@@ -116,6 +215,10 @@ p {
     img {
       width: 100%;
       border-radius: 10px;
+
+      @media only screen and (min-width: $desktop) {
+        height: 160px;
+      }
     }
 
     h6,
@@ -134,6 +237,25 @@ p {
     h4 {
       color: hsl(233, 26%, 24%);
       font-weight: 300;
+    }
+
+    @media only screen and (min-width: $desktop) {
+      margin: 0 10px;
+    }
+  }
+
+  @media only screen and (min-width: $desktop) {
+    h1 {
+      margin-left: 10.5%;
+      text-align: left;
+    }
+
+    .articles-container {
+      width: 80%;
+      margin: 30px auto;
+      display: flex;
+      flex-direction: row;
+      text-align: left;
     }
   }
 }
@@ -167,5 +289,25 @@ p {
     color: hsl(233, 8%, 62%);
     font-weight: 300;
     margin-bottom: 0;
+  }
+
+  .second-footer-container {
+    margin-bottom: -18px;
+  }
+
+  @media only screen and (min-width: $desktop) {
+    .footer-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      .first-footer-container {
+        margin-top: 18px;
+      }
+
+      .fourth-footer-container {
+        margin-top: 12px;
+      }
+    }
   }
 }

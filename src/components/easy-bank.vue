@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <Header class="header" />
     <Intro class="intro" />
     <why-choose class="why-choose" />
     <latest-articles class="latest-articles" />

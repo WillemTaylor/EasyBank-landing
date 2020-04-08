@@ -1,7 +1,15 @@
 <template>
-  <div class="header-container">
-    <logo :header="header" />
-    <hamburger-icon class="hamburger" />
+  <div>
+    <logo :header="header" style="margin-top: 14px;" />
+    <div class="shortcuts mobile-hide">
+      <p>Home</p>
+      <p>About</p>
+      <p>Contact</p>
+      <p>Blog</p>
+      <p>Careers</p>
+    </div>
+    <hamburger-icon class="hamburger desktop-hide" />
+    <button class="button mobile-hide">Request Invite</button>
   </div>
 </template>
 
