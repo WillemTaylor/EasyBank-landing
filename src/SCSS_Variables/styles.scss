@@ -49,6 +49,14 @@ p {
   color: white;
   background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
   margin-bottom: 80px;
+
+  &:hover {
+    background: linear-gradient(
+      to right,
+      hsl(136, 65%, 67%),
+      hsl(192, 70%, 67%)
+    );
+  }
 }
 
 .mobile-hide {
@@ -84,6 +92,30 @@ p {
       cursor: pointer;
       margin: 0;
       padding: 0 20px;
+      position: relative;
+      text-decoration: none;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 67%;
+        height: 4px;
+        bottom: -15px;
+        left: 14px;
+        background: linear-gradient(
+          to right,
+          hsl(136, 65%, 51%),
+          hsl(192, 70%, 51%)
+        );
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out 0s;
+      }
+
+      &:hover:before {
+        visibility: visible;
+        transform: scaleX(1);
+      }
     }
   }
 
@@ -93,6 +125,13 @@ p {
     .button {
       margin-bottom: 0;
     }
+  }
+}
+
+@media only screen and (min-width: $desktop) {
+  .intro,
+  .why-choose-container {
+    padding-left: 10.5%;
   }
 }
 
@@ -144,7 +183,6 @@ p {
   @media only screen and (min-width: $desktop) {
     .intro-container {
       width: 400px;
-      margin-left: 11%;
       text-align: left;
       position: relative;
       bottom: 160px;
@@ -174,7 +212,6 @@ p {
 
 @media only screen and (min-width: $desktop) {
   .why-choose-container {
-    margin-left: 11%;
     text-align: left;
     width: 600px;
 
@@ -237,6 +274,11 @@ p {
     h4 {
       color: hsl(233, 26%, 24%);
       font-weight: 300;
+
+      &:hover {
+        cursor: pointer;
+        color: hsl(136, 64%, 75%);
+      }
     }
 
     @media only screen and (min-width: $desktop) {
@@ -246,8 +288,9 @@ p {
 
   @media only screen and (min-width: $desktop) {
     h1 {
-      margin-left: 10.5%;
+      padding-left: 22px;
       text-align: left;
+      width: 80%;
     }
 
     .articles-container {
@@ -269,8 +312,18 @@ p {
     margin: 30px auto;
     display: flex;
     justify-content: space-between;
-
     width: 200px;
+
+    @media only screen and (min-width: $desktop) {
+      width: inherit;
+    }
+
+    svg {
+      &:hover path {
+        cursor: pointer;
+        fill: hsl(136, 64%, 75%);
+      }
+    }
   }
 
   p {
@@ -278,6 +331,11 @@ p {
 
     &:last-of-type {
       margin-bottom: 30px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: hsl(136, 64%, 75%);
     }
   }
 
@@ -299,14 +357,23 @@ p {
     .footer-content {
       display: flex;
       flex-direction: row;
-      justify-content: space-evenly;
+      justify-content: space-between;
+      margin: 0 auto;
+      width: 78%;
 
       .first-footer-container {
         margin-top: 18px;
       }
 
+      .first-footer-container,
+      .second-footer-container,
+      .third-footer-container {
+        text-align: left;
+      }
+
       .fourth-footer-container {
-        margin-top: 12px;
+        margin: 12px 0 0 170px;
+        text-align: right;
       }
     }
   }
