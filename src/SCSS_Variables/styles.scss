@@ -1,5 +1,4 @@
 @import 'variables.scss';
-@import url('https://fonts.googleapis.com/css?family=Public+Sans&display=swap');
 
 body {
   width: 100%;
@@ -78,10 +77,10 @@ p {
   justify-content: space-between;
   position: relative;
   z-index: 2;
-  width: 100%;
 
   @media only screen and (max-width: $desktop) {
     position: fixed;
+    width: 100%;
   }
 
   svg {
@@ -223,7 +222,7 @@ p {
   background-color: hsl(0, 0%, 98%);
 
   .image-container {
-    height: 335px;
+    height: 380px;
 
     @media only screen and (min-width: $desktop) {
       height: 280px;
