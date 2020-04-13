@@ -1,29 +1,43 @@
 # easybank
 
+### Setting up Netlify site
+
+```
+npm run build in project.
+
+Deploy site on netlify, add 'npm run build' to build command and 'dist/' to publish directory
+```
+
 ## Project setup
+
 ```
 npm install
 ```
 
 ### Compiles and hot-reloads for development
+
 ```
 npm run serve
 ```
 
 ### Compiles and minifies for production
+
 ```
 npm run build
 ```
 
 ### Run your tests
+
 ```
 npm run test
 ```
 
 ### Lints and fixes files
+
 ```
 npm run lint
 ```
 
 ### Customize configuration
+
 See [Configuration Reference](https://cli.vuejs.org/config/).
