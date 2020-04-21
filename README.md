@@ -1,43 +1,14 @@
-# easybank
+# Easybank Landing page
 
-### Setting up Netlify site
+This front-end coding challenge was taken from https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN.
 
-```
-npm run build in project.
+## The Challenge
 
-Deploy site on netlify, add 'npm run build' to build command and 'dist/' to publish directory
-```
+Within this repo, I have created a landing page for a fake banking website. Project was built using Vue.js framework. A mixture of SCSS and HTML was used to achieve styling as close to the design as possible, and Javascript was used to achieve the functionality of the website.
 
-## Project setup
+### What it does
 
-```
-npm install
-```
+You should be able to:
 
-### Compiles and hot-reloads for development
-
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-
-```
-npm run build
-```
-
-### Run your tests
-
-```
-npm run test
-```
-
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
