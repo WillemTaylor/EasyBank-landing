@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <a name="about">
     <div class="why-choose-container">
       <h1>Why choose Easybank?</h1>
       <p>We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</p>
@@ -26,7 +26,7 @@
         <p>Manage your savings, investments, pension and much more from one account. Tracking your money has never been easier.</p>
       </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <script>

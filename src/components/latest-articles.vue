@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <a name="blog">
     <h1>Latest Articles</h1>
     <div class="articles-container">
       <div class="article-container">
@@ -30,7 +30,7 @@
         <p>After a lot of hard work by the whole team, we're excited to launch our closed beta. It's easy to request an invite through the site...</p>
       </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <script>

@@ -1,8 +1,7 @@
 <template>
   <div>
     <div class="image-container">
-      <!-- Had to use 'v-if screenWidth' here rather than a 'display: block / hide' media query, as the whole desktop image wouldn't show when setting display: none; on the mobile image for some reason. You can imitate by adding 'desktop-hide' and 'mobile-hide' classes to 'bg-mobile' and 'bg-desktop' respectively -->
-      <div v-if="screenWidth < 1200" class="bg-mobile">
+      <div v-if="isMobile" class="bg-mobile">
         <intro-bg-mob />
       </div>
       <div v-else class="bg-desktop">
@@ -31,8 +30,18 @@ export default {
   data() {
     return {
       image: image,
-      screenWidth: screen.width
+      screenWidth: window.innerWidth
     };
+  },
+  computed: {
+    isMobile() {
+      return this.screenWidth < 960;
+    }
+  },
+  mounted() {
+    window.addEventListener("resize", () => {
+      this.screenWidth = window.innerWidth;
+    });
   }
 };
 </script>
